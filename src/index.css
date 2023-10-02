@@ -67,3 +67,32 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+input {
+  width: 100%;
+}
+
+.grid {
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px;
+  
+}
+
+.card {
+  border: 1px solid #FF7777;
+  border-radius: 5px;
+  margin: 25px;
+  padding: 10px 0 0 10px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  max-width: 300px;
+  border: 1px solid black;
+}

@@ -12,6 +12,7 @@ const AddCategory = ({setCategories}) => {
         e.preventDefault();
 
         setCategories(categories => [...categories, inputValue]);
+        setInputValue('');
     }
 
     return (
