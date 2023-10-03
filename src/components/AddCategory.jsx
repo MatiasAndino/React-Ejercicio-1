@@ -11,12 +11,12 @@ const AddCategory = ({setCategories}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setCategories(categories => [...categories, inputValue]);
+        setCategories(categories => [inputValue, ...categories]);
         setInputValue('');
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={ handleSubmit }>
             <input 
                 type="text" 
                 value={ inputValue }    
