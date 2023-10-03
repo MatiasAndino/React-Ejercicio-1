@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import GifGridItem from './GifGridItem';
-import { getGifts } from '../helpers/getGifs';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 const GifGrid = ({ category }) => {
 
-    const [images, setImages] = useState([]);
-    
-    useEffect( () => {
-        getGifts( category ).then( setImages );
-    }, [ category ]);
+    const { data:images, loading} = useFetchGifs( category );
 
     return (
         <>
             <h3>{ category }</h3>
-            <div className='grid'>
+            {loading && <p className='animate__flash'>Cargando...</p>}
+            <div className='grid animate__pulse'>
                 {
                     images.map(( image ) => (
                         <GifGridItem 
